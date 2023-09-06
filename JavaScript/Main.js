@@ -130,6 +130,7 @@ function openModal(updateOrAdd) {
 
 function closeModal() {
     modal.style.display = "none";
+    clearModalForm();
 }
 
 window.addEventListener('click', (e) => {
@@ -206,5 +207,5 @@ function callEverthing() {
 
 
 function logOutClear() {
-    window.location.replace("Login.html");
+    window.location.replace("index.html");
 }

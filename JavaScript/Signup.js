@@ -38,7 +38,7 @@ signUp.addEventListener("click", ((e) => {
         credentials = credentials ? credentials : [];
         credentials.push({ gmail: gmail_val, password: password_val, name: user_val });
         localStorage.setItem("credentials", JSON.stringify(credentials));
-        window.location.href = "./Login.html";
+        window.location.href = "./index.html";
     } else {
         alert("Email Aready Exist");
         clearField();
