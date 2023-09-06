@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Everything.css">
+    <script src="https://kit.fontawesome.com/a9e183d56d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar bg-body-tertiary border-bottom">
+        <form class="container-fluid justify-content-start d-flex">
+            <button class="btn btn-outline-primary me-2" type="button" id="openModalBtn" onclick="openModal('Add')">Add Customer</button>
+
+
+            <!-- Modal -->
+            <div class="modal blur-something bg-transparent" id="modal">
+                <div class="modal-dialog position-relative top-10">
+                    <div class="modal-content position-absolute" style="width: 700px; left: -20%;">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Customer Details</h1>
+                            <button type="button" class="btn-close" id="closeModalBtn" data-bs-dismiss="modal"
+                                aria-label="Close" onclick="closeModal()"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="d-flex flex-row justify-content-around">
+                                <div class="form-floating mb-3 w-46">
+                                    <input type="text" class="form-control rounded-pill px-4"
+                                        id="modalCustomerFirstName" placeholder="Tribhuvan">
+                                    <label class="px-4" for="modalCustomerFirstName">First Name</label>
+                                </div>
+                                <div class="form-floating mb-3 w-46">
+                                    <input type="text" class="form-control rounded-pill px-4" id="modalCustomerLastName"
+                                        placeholder="Kumar">
+                                    <label class="px-4" for="modalCustomerLastName">Last Name</label>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row justify-content-around">
+                                <div class="form-floating mb-3 w-46">
+                                    <input type="text" class="form-control rounded-pill px-4" id="modalCustomerStreet"
+                                        placeholder="121-2">
+                                    <label class="px-4" for="modalCustomerStreet">Street</label>
+                                </div>
+                                <div class="form-floating mb-3 w-46">
+                                    <input type="text" class="form-control rounded-pill px-4" id="modalCustomerAddress"
+                                        placeholder="CP">
+                                    <label class="px-4" for="modalCustomerAddress">Address</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-around">
+                                <div class="form-floating mb-3 w-46">
+                                    <input type="text" class="form-control rounded-pill px-4" id="modalCustomerCity"
+                                        placeholder="Tribhuvan">
+                                    <label class="px-4" for="modalCustomerCity">City</label>
+                                </div>
+                                <div class="form-floating mb-3 w-46">
+                                    <input type="text" class="form-control rounded-pill px-4" id="modalCustomerState"
+                                        placeholder="Tribhuvan">
+                                    <label class="px-4" for="modalCustomerState">State</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-around">
+                                <div class="form-floating mb-3 w-46">
+                                    <input type="email" class="form-control rounded-pill px-4" id="modalCustomerEmail"
+                                        placeholder="Tribhuvan">
+                                    <label class="px-4" for="modalCustomerEmail">Email</label>
+                                </div>
+                                <div class="form-floating mb-3 w-46">
+                                    <input type="number" class="form-control rounded-pill px-4"
+                                        id="modalCustomerPhoneNumber" placeholder="Tribhuvan">
+                                    <label class="px-4" for="modalCustomerPhoneNumber">Phone</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="modalSubmit"
+                                onclick="updateOrAdd()"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="position-relative start-36-half">
+                <span class="navbar-brand mb-0 h1">Customer Lists</span>
+            </div>
+
+            <div class="position-absolute" style="right: 0.5%;">
+                <button class="btn btn-outline-secondary me-2" type="button" id="logOut-button" onclick="logOutClear()">Log Out</button>
+            </div>
+        </form>
+    </nav>
+
+    <main>
+        <div class="container my-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Street</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">City</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider" id="auto-render-here">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../JavaScript/Main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+.margin-auto{
+    margin: auto !important;
+}
+.w-70{
+    width: 70% !important;
+}
+.w-30{
+    width: 30% !important;
+}
+.w-46{
+    width: 46% !important;
+}
+.start-36-half{
+    left: 36.5% !important;
+}
+.blur-something{
+    backdrop-filter: blur(1px);
+}
+.top-10{
+    top: 10% !important;
+}
+.edit-btn-modal{
+    margin-right: 1.8rem;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
